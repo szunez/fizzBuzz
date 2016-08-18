@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="return fizz or buzz if a number is divisible else the input">
+    <link rel="stylesheet" href="css/styles.css">
+	<title>Fizz Buzz</title>
+    <script src="js/main.js"></script>
+</head>
+
+<body class="fizzBuzz">
+    <div>
+        <h1>Fizz Buzz</h1>
+    </div>
+    <div>
+        <form>
+            <ul>
+                <input type="text" id="fizzValue">Fizz number<br>
+                <input type="text" id="buzzValue">Buzz number<br>
+                <input type="text" id="inputValue">Input number<br>
+                Result  :  <output id="outputValue"><br>
+            </ul>
+        </form>
+         <a href="https://github.com/szunez/fizzBuzz">Source code on <img src="img/GitHub-Mark-32px.png"></a>
+    </div>
+    <script>
+        function run(){
+            var inputObject = document.getElementById("inputValue").value;
+            var fizzObject = document.getElementById("fizzValue").value;
+            var buzzObject = document.getElementById("buzzValue").value;
+            var outputObject = fizzBuzz(inputObject, fizzObject, buzzObject);
+            document.getElementById("outputValue").innerHTML = outputObject;
+        }
+        document.getElementById("inputValue").addEventListener("change", run, false);
+        document.getElementById("fizzValue").addEventListener("change", run, false);
+        document.getElementById("buzzValue").addEventListener("change", run, false);
+    </script>
+</body>
